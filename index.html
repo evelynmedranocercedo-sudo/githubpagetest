@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil Profesional - Evelyn Medrano</title>
+
+  <style>
+    /* Reinicia márgenes y fuente para toda la página */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Georgia, serif; }
+
+    /* ---------- CARÁTULA ---------- */
+    #portada {
+      height: 100vh;                         /* ocupa toda la pantalla */
+      background: url("fondo.jpg") center/cover no-repeat;
+      display: flex; justify-content: center; align-items: center;
+    }
+    .cuadro {
+      background: rgba(255, 255, 255, 0.75); /* blanco semitransparente */
+      padding: 50px 40px; max-width: 520px;
+      text-align: center; border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
+    .cuadro h1 { color: #4f666b; font-size: 2rem; margin-bottom: 25px; }
+    .cuadro span { color: #c4857c; }
+    button {
+      background: #c4857c; color: #fff; border: none;
+      padding: 12px 30px; font-size: 1rem; border-radius: 30px; cursor: pointer;
+    }
+    button:hover { background: #4f666b; }
+
+    /* ---------- PERFIL ---------- */
+    #perfil { display: none; min-height: 100vh; background: #fbf3ee; padding: 30px 15px; }
+    .contenedor { max-width: 850px; margin: auto; }
+    header { text-align: center; color: #4f666b; margin-bottom: 25px; }
+    header h2 { font-size: 2rem; }
+    header p { color: #c4857c; }
+    section {
+      background: #fff; padding: 20px 25px; margin-bottom: 18px;
+      border-left: 6px solid #9db7b5; border-radius: 10px;
+    }
+    section h3 { color: #4f666b; margin-bottom: 10px; }
+    p, li { line-height: 1.6; color: #444; }
+    li { margin-left: 20px; }
+    footer { text-align: center; margin-top: 20px; }
+  </style>
+</head>
+
+<body>
+
+  <!-- CARÁTULA DE INICIO -->
+  <div id="portada">
+    <div class="cuadro">
+      <h1>Bienvenidos al perfil profesional de <span>Evelyn Medrano</span></h1>
+      <button onclick="abrirPerfil()">Ver mi perfil</button>
+    </div>
+  </div>
+
+  <!-- PERFIL PROFESIONAL (oculto al inicio) -->
+  <main id="perfil">
+    <div class="contenedor">
+
+      <header>
+        <h2>Evelyn Jimena Medrano Cercedo</h2>
+        <p>Estudiante de Derecho | Practicante preprofesional</p>
+        <p>📞 980 917 988 &nbsp;|&nbsp; ✉ evelynmedranocercedo@gmail.com</p>
+      </header>
+
+      <section>
+        <h3>Sobre mí</h3>
+        <p>Estudiante de noveno ciclo de Derecho en la Universidad Científica del Sur,
+        con conocimientos en arbitraje de consumo, marcas y voluntariados. Destaco en
+        comunicación efectiva, análisis, resolución de conflictos y trabajo en equipo.</p>
+      </section>
+
+      <section>
+        <h3>Experiencia</h3>
+        <ul>
+          <li><b>Practicante preprofesional</b> – Procuraduría Pública Especializada en
+          Delitos de Terrorismo, Procuraduría General del Estado (CESIGRA) – Mar. 2026 – Actualidad.</li>
+          <li><b>Asistente de Cátedra</b> – Derecho Administrativo y Procesal Administrativo,
+          Universidad Científica del Sur (Ago. 2024 – Dic. 2025).</li>
+          <li><b>Voluntaria</b> – Clínica de Interés Público, Capítulo Penal (Feb. 2025 – Presente).</li>
+          <li><b>Competencia Nacional de Arbitraje de Consumo (Indecopi)</b> – 2.° lugar
+          como mejor memoria de la parte demandada.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Formación</h3>
+        <ul>
+          <li>Derecho – Universidad Científica del Sur (2022 – Actualidad). Becada por excelencia académica.</li>
+          <li>Diplomado en Derecho Administrativo, Procedimiento Sancionador y Gestión Pública (384 h).</li>
+          <li>Curso Especializado en Contrataciones del Estado, APPS, Obras por Impuestos y Arbitraje (25 h).</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Competencias</h3>
+        <ul>
+          <li>Conocimiento de la LPAG y análisis de documentos legales.</li>
+          <li>Redacción jurídica (notificaciones y escritos procesales).</li>
+          <li>Inglés intermedio (ICPNA) y Office intermedio (Word, Excel, PowerPoint).</li>
+          <li>Comunicación efectiva, trabajo en equipo y capacidad de adaptación.</li>
+        </ul>
+      </section>
+
+      <footer>
+        <button onclick="volver()">Volver al inicio</button>
+      </footer>
+
+    </div>
+  </main>
+
+  <script>
+    // Oculta la carátula y muestra el perfil
+    function abrirPerfil() {
+      document.getElementById("portada").style.display = "none";
+      document.getElementById("perfil").style.display = "block";
+    }
+    // Hace lo contrario: regresa a la carátula
+    function volver() {
+      document.getElementById("perfil").style.display = "none";
+      document.getElementById("portada").style.display = "flex";
+    }
+  </script>
+
+</body>
+</html>
